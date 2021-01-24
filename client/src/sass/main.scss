@@ -1,36 +1,48 @@
-@import './mixins/mixins.scss';
+@import "./mixins/mixins.scss";
 
 // fonts
-$font: "Poppins", -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+$font: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+  "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
   sans-serif;
 
 // colours
-$color-light-yellow: #FFDA5E;
-$color-dark-yellow: #FFC911;
-$color-dark-yellow-100: #E1AF06;
+$color-main-bg: linear-gradient(
+    180deg,
+    rgba(222, 207, 255, 0.33) 0%,
+    rgba(240, 121, 87, 0.16) 100%
+  ),
+  #ffffff;
+$color-light-yellow: #ffda5e;
+$color-dark-yellow: #ffc911;
+$color-dark-yellow-100: #e1af06;
 $color-dark-navyBlue: #183042;
-$color-dark-navyBlue-100: #152A3A;
+$color-dark-navyBlue-100: #152a3a;
 $color-dark-navyBlue-200: #122432;
 
-$color-black: #151E2E;
+$color-black: #151e2e;
 
-$color-bright-green: #00D6A8;
-$color-bright-pink: #FA1FE4;
+$color-orange: #f07957;
+$color-bright-green: #00d6a8;
+$color-bright-pink: #fa1fe4;
 $color-white: #fff;
-$color-text-red: #ED3B3C;
+$color-text-red: #ed3b3c;
 $color-text-gray-500: #a0aec0;
-$color-text-gray-600: #9C9B9B;
+$color-text-gray-600: #9c9b9b;
 $color-text-gray-700: #4a5568;
 $color-text-gray-800: #2d3748;
 $color-border-gray-400: #cbd5e0;
-$color-border-gray-500: #C4C4C4;
-$gradient-purple-opaque: linear-gradient(123.83deg, rgba(219, 160, 221, 0.64) 8.94%, rgba(221, 160, 221, 0) 101.38%);
+$color-border-gray-500: #c4c4c4;
+$gradient-purple-opaque: linear-gradient(
+  123.83deg,
+  rgba(219, 160, 221, 0.64) 8.94%,
+  rgba(221, 160, 221, 0) 101.38%
+);
 
 // box-shadows
 $shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-$shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.50);
-$shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+$shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+$shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+  0 4px 6px -2px rgba(0, 0, 0, 0.05);
 
 // basic resets
 * {
@@ -41,7 +53,6 @@ $shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.
 
 html {
   font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
-  overflow-y: scroll;
 
   @include xl-desk {
     font-size: 68.75%;
@@ -66,8 +77,10 @@ html {
 
 // basic styles
 body {
-  background: $color-dark-yellow;
+  background: $color-main-bg;
   font-family: $font;
+  background-repeat: no-repeat;
+  min-height: 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -98,6 +111,8 @@ p {
 
 a {
   color: $color-dark-navyBlue;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 li {
@@ -110,7 +125,7 @@ button {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
@@ -118,6 +133,7 @@ code {
 .container {
   width: 90vw;
   margin: 0 auto;
+  padding: 2rem 5rem 0 5rem;
 
   @include xl-desk {
     width: 80vw;
@@ -126,7 +142,7 @@ code {
   @include tab-land {
     width: 85vw;
   }
-  
+
   @include tab-port {
     width: 75vw;
   }

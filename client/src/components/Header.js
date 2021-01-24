@@ -46,6 +46,7 @@ const Header = (props) => {
 
     getAllPosts().then(async (response) => {
       const posts = response.data;
+      console.log(posts)
       await props.saveAllPostsDataToStore(posts);
     }).catch((err) => {
       props.saveAllPostsDataToStore([]);
@@ -63,36 +64,17 @@ const Header = (props) => {
   const handleHeaderDisplay = (currentUser) => {
     if (!props.currentUser) {
       return (
-        <header>
-          <div className={styles.container}>
-            <div className={styles.innercontainer}>
-              <div className={styles.logo}>
-                <Link to="/">NeighboursBook</Link>
-              </div>
-              <div className={styles.navigation}>
-                <nav>
-                  <Link to={"/login"}>Log in</Link>
-                  <Link to={"/signup"}>Sign up</Link>
-                </nav>
-              </div>
-            </div>
+        <header className={styles.container}>
+          <div className={styles.logo}>
+            <Link to="/">Neighbourly.</Link>
           </div>
         </header>
       )
     } else {
       return (
-        <header>
-          <div className={styles.container}>
-            <div className={styles.innercontainer}>
-              <div className={styles.logo}>
-                <Link to="/">NeighboursBook</Link>
-              </div>
-              <div className={styles.navigation}>
-                <nav>
-                  <button className={styles.signOutButton} onClick={handleSignOut}>Log out</button>
-                </nav>
-              </div>
-            </div>
+        <header className={styles.container}>
+          <div className={styles.logo}>
+            <Link to="/">Neighbourly.</Link>
           </div>
         </header>
       )

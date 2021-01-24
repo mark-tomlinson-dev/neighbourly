@@ -29,6 +29,9 @@
     .profileImage {
       border-radius: 50%;
       width: 100px;
+      height: 100px;
+      object-fit: cover;
+      background-position: top;
       margin: 1rem;
     }
 

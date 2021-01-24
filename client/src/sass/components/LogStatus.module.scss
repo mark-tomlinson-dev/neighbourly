@@ -1,4 +1,4 @@
-@import './../main.scss';
+@import "./../main.scss";
 
 .logStatus {
   display: flex;
@@ -14,8 +14,7 @@
 
   @include phone {
     margin: 1rem;
-    padding: 1rem .5rem 1rem .5rem;
-
+    padding: 1rem 0.5rem 1rem 0.5rem;
   }
 }
 
@@ -34,9 +33,11 @@
 }
 
 .image {
-  border-radius: 20%;
-  max-width: 100%;
-  max-height: 100%;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-position: top;
 }
 
 .textContainer {
@@ -47,38 +48,39 @@
   }
 
   p {
-    margin-bottom: .8rem;
+    margin-bottom: 0.8rem;
     color: $color-dark-navyBlue;
     font-weight: 500;
     line-height: normal;
-  
+
     @include phone {
       font-size: 1.6rem;
     }
   }
 }
 
-.subContentContainer { 
+.subContentContainer {
   display: flex;
   flex-direction: row;
   align-items: center;
   padding: 0;
-  
+
   li {
     padding: 0;
-    margin-left: 1rem; 
-  
+    margin-left: 1rem;
+
     &:first-child {
       margin-left: 0;
       color: $color-text-gray-600;
       font-weight: 500;
     }
     &:nth-child(2) {
-      color: $color-bright-green;
+      color: #00CDA8;
+      font-weight: 500;
     }
     &:nth-child(3) {
-      color: $color-bright-green;
-      font-weight: 600;
+      color: #00CDA8;
+      font-weight: 500;
       overflow: hidden;
       text-overflow: ellipsis;
     }

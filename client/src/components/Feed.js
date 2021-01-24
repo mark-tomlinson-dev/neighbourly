@@ -15,39 +15,10 @@ import LogStatusButton from './LogStatusButton';
 import styles from './../sass/components/Feed.module.scss';
 
 const Feed = (props) => {
-
-  const [pageNumber, setPageNumber] = useState(1);
- 
-  const onScroll = async (event) => {
-    let element = event.target
-    if (element.scrollHeight - element.scrollTop === element.clientHeight && props.currentUser === null) {
-      setPageNumber(pageNumber + 1)
-      await getLimitedPosts(pageNumber).then(async (response) => {
-        const newPosts = response.data;
-        props.addNewPostToAllPostStore(newPosts)
-      }).catch((err) => {
-        console.log(err)
-      })
-    } else if (element.scrollHeight - element.scrollTop === element.clientHeight && props.currentUser) {
-      setPageNumber(pageNumber + 1)
-      await getLimitedPosts(pageNumber, props.currentUser.id).then(async (response) => {
-        const newPosts = response.data;
-        props.addNewPostToAllPostStore(newPosts)
-      }).catch((err) => {
-        console.log(err)
-      })
-    }
-  } 
   
   const handleAllPosts = () => {
 
-    if (props.allPosts === null) {
-      return (
-        <div>
-          <h1> Loading...</h1>
-        </div>
-      )
-    } else if (props.currentUser === null && props.allPosts) {
+    if (props.allPosts) {
 
       let posts = props.allPosts;
       
@@ -64,7 +35,7 @@ const Feed = (props) => {
         const createdAt = post.createdAt;
         const suburb = post.Suburb;
         const postId = post._id;
-
+        
         return (
           <div key={post._id}>
             <LogStatus postId={postId} user={userId} createdAt={createdAt} suburb={suburb} claps={claps} />
@@ -73,38 +44,12 @@ const Feed = (props) => {
       });
 
       return posts
-      // If the use is logged in it will only display the posts in their suburb.
-    } else if (props.currentUser && props.filteredPosts.length > 0 ){
-      let filteredPosts = props.filteredPosts;
 
-      filteredPosts.sort(function (a, b) {
-        // Turn your strings into dates, and then subtract them
-        // to get a value that is either negative, positive, or zero.
-        return new Date(b.createdAt) - new Date(a.createdAt);
-      });
-
-      filteredPosts = props.filteredPosts.map((post) => {
-        const userId = post.User;
-        const claps = post.Claps;
-        const createdAt = post.createdAt;
-        const suburb = post.Suburb;
-        const postId = post._id;
-
-        return (
-          <div key={post._id}>
-            <LogStatus postId={postId} user={userId} createdAt={createdAt} suburb={suburb} claps={claps} />
-          </div>
-        )
-      });
-
-      return filteredPosts;
-    } else if (props.currentUser && props.filteredPosts.length <= 0) {
-      return (
-        <div className={styles.noPostsContainer}>
-          <h1> Oops... Looks like there are no posts <span role="img">😟</span>. Be the first to post!</h1>
-        </div>
-      )
-    } else {
+    } 
+    
+    
+    
+    else {
       return (
         <div className={styles.noPostsContainer}>
           <h1> Loading... </h1>
@@ -114,9 +59,9 @@ const Feed = (props) => {
   };
 
   return (
-    <div className={styles.feed} onScroll={onScroll} >
+    <div className={styles.feed} >
       <div className={styles.logFeedContainer}>
-        <LogStatusButton />
+        {/* <LogStatusButton /> */}
         {handleAllPosts()}
       </div>
     </div>
