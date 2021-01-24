@@ -4,7 +4,9 @@ const User = require('./../models/User');
 // Below function gets all the posts
 async function getAllPosts(req, res) {
   // Post.find().sort({ createdAt: -1 }).then(posts => res.json(posts))
-  Post.find().sort({ createdAt: -1 }).limit(6).then(posts => res.json(posts))
+  Post.find().sort({ createdAt: -1 }).limit().then(posts => res.json(posts))
+  
+
 };
 
 // Below function gets a specified number of posts
@@ -17,11 +19,14 @@ async function getPaginatedPosts(req, res) {
   skip = (page) * limit;
   lastPage = page * limit;
   
-  
+
+
   // The below returns all post regardless of user suburb
   if (req.query.id === undefined) {  
 
     const paginate = {}
+
+   
 
     let counts = await Post.countDocuments()
 

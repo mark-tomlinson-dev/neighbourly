@@ -1,109 +1,17 @@
-@import './../main.scss';
+@import "./../main.scss";
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,500&display=swap");
 
-header {
-  height: 80px;
-  width: 100%;
-  overflow: hidden;
+.logo {
+  display: flex;
+  justify-content: center;
+  
 
-  @include phone {
-    display: flex;
-    align-items: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background: $color-dark-yellow;
-    height: 6rem;
-    opacity: .9;
+  a {
+    font-family: "Playfair Display", serif;
+    font-size: 12rem;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: -0.1rem;
   }
 
-  .innercontainer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 80px;
-
-    @include phone {
-      height: 80px;
-      justify-content: center;
-    }
-    .logo {
-      
-      a {
-        font-size: 2.8rem;
-        font-weight: 700;
-        text-decoration: none;
-      }
-      @include phone {
-        display: none;
-      }
-    }
-    .navigation {
-      
-      nav {
-        display: flex;
-        align-items: center;
-          a {
-            text-decoration: none;
-            font-size: 1.6rem;
-            border: solid 1px $color-dark-navyBlue;
-            border-radius: 5px;
-            padding: .8rem 2rem;
-            color: $color-dark-navyBlue;
-            margin: .5rem;
-            &:hover {
-              background-color: $color-light-yellow;
-              color: $color-dark-navyBlue;
-              transition: .1s ease-in-out;
-              box-shadow: $shadow-lg;
-              }    
-            &:active {
-              background: none;
-              box-shadow: none;
-              background-color: $color-dark-yellow-100;
-              border: none;
-            }
-            &:nth-child(2) {
-              margin-right: 0;
-              background-color: $color-dark-navyBlue;
-              color: $color-dark-yellow;
-              &:hover{
-                color: $color-dark-yellow; 
-                background-color: $color-dark-navyBlue-200;
-                transition: .1s ease-in-out;
-                box-shadow: $shadow-lg;
-              }
-            }
-          }
-          button {
-            background: none;
-            text-decoration: none;
-            font-size: 1.6rem;
-            border: solid 1px $color-dark-navyBlue;
-            border-radius: 5px;
-            padding: .8rem 2rem;
-            color: $color-dark-navyBlue;
-            margin: .5rem;
-            &:focus {
-              outline: none;
-            }
-            &:hover {
-              background-color: $color-light-yellow;
-              color: $color-dark-navyBlue;
-              transition: .1s ease-in-out;
-              box-shadow: $shadow-lg;
-              }    
-            &:active {
-              background: none;
-              box-shadow: none;
-              background-color: $color-dark-yellow-100;
-              border: none;
-            }
-          }
-      }
-    }
-  }
-};
-
-.navBarHidden {
-  display: none;
 }
