@@ -133,7 +133,7 @@ code {
 .container {
   width: 90vw;
   margin: 0 auto;
-  padding: 2rem 5rem 0 5rem;
+  // padding: 2rem 5rem 0 5rem;
 
   @include xl-desk {
     width: 80vw;

@@ -7,8 +7,33 @@
   margin-bottom: 5rem;
   margin-top: 5rem;
   padding-top: 3rem;
+
+  position: relative;
+
+  .logFeedButton {
+    // z-index: -1;
+    position: absolute;
+    top: -70px;
+    right: 10%;
+    background-color: $color-orange;
+    border: none !important;
+    color: $color-white;
+    text-transform: uppercase;
+    opacity: .9;
+    font-weight: 400;
+    padding: .5em 1em;
+    font-size: 1.6em;
+    text-align: center;
+    border-radius: 50%;
+    outline: none;
+    width: 6em;
+    height: 6em;
+    cursor: pointer;
+  }
 }
 
 .noPostsContainer {
+  height: 60vh;
   text-align: center;
 }
+

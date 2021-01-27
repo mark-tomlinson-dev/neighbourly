@@ -62,6 +62,7 @@ const Feed = (props) => {
     <div className={styles.feed} >
       <div className={styles.logFeedContainer}>
         {/* <LogStatusButton /> */}
+        <button className={styles.logFeedButton}>Click to self-isolate</button>
         {handleAllPosts()}
       </div>
     </div>
