@@ -24,6 +24,7 @@ $color-black: #151e2e;
 $color-orange: #f07957;
 $color-bright-green: #00d6a8;
 $color-bright-pink: #fa1fe4;
+$color-purple: #C4B5FD;
 $color-white: #fff;
 $color-text-red: #ed3b3c;
 $color-text-gray-500: #a0aec0;
@@ -70,7 +71,7 @@ html {
   }
 
   @include phone {
-    font-size: 50%;
+    font-size: 45%;
     overflow-y: scroll;
   }
 }
@@ -123,6 +124,7 @@ li {
 button {
   cursor: pointer;
   appearance: none;
+  font: inherit;
 
 }
 
@@ -131,12 +133,7 @@ code {
     monospace;
 }
 
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
+
 
 // Basic site-wide responsive container
 .container {
@@ -149,11 +146,11 @@ select {
   }
 
   @include tab-land {
-    width: 85vw;
+    width: 95vw;
   }
 
   @include tab-port {
-    width: 75vw;
+    width: 95vw;
   }
 
   @include phone {

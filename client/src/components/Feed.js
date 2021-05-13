@@ -57,9 +57,7 @@ const Feed = (props) => {
 
   return (
     <div className={styles.feed} >
-     
       <div className={styles.logFeedContainer}>
-        {/* <LogStatusButton /> */}
         {handleAllPosts()}
       </div>
     </div>

@@ -20,7 +20,7 @@ const About = (props) => {
 					<div className={styles.left}>
             {currentUser
               ? <div>
-                  <h2 className={styles.title}>Hi <span>{currentUser.FirstName}!</span> Thanks for logging in. Did you self-isolate today? </h2>
+                  <h2 className={styles.title}>Hi <span>{currentUser.FirstName}</span> 👋 Thanks for checking in. Did you self-isolate today? </h2>
                   <LogStatusButton />
                 </div>
               : <div>
@@ -49,9 +49,7 @@ const About = (props) => {
               </p>
 						</div>
 					</div>
-					<div className={styles.right}>
-            {/* <LogStatusButton /> */}
-            <a href="">Log out</a>
+					<div className={styles.right}>       
 						<Feed />
 					</div>
 				</div>

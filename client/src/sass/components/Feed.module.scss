@@ -1,7 +1,8 @@
 @import './../main.scss';
 
 .logFeedContainer {
-  background-color: $color-white;
+  background-color: rgba(255, 255, 255, 0.43);
+  // background-color: $color-white;
   border-radius: 25px;
   box-shadow: $shadow-2xl;
   margin-bottom: 5rem;
@@ -9,6 +10,18 @@
   padding-top: 3rem;
 
   position: relative;
+
+  @include tab-land {
+    width: 80%;
+    margin: 0;
+    padding: 0;
+    background: none;
+    box-shadow: none;
+  }
+
+  @include tab-port {
+    width: 100%;
+  }
 
   .logFeedButton {
 

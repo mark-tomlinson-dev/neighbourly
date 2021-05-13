@@ -52,7 +52,7 @@ const LogStatusButton = (props) => {
     } else {
 
       return (  
-        <button className={styles.btn} disabled={handleDisableOnStatusButton()} onClick={handleStatusButtonOnClick} data-content="Yes, I sure did!">Yes, I sure did!</button>
+        <button className={styles.btn} disabled={handleDisableOnStatusButton()} onClick={handleStatusButtonOnClick} data-content="Yep, I sure did!">Yep, I sure did!</button>
       )
     }
   };

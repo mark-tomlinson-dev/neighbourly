@@ -3,13 +3,15 @@
 
 
 .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  display: grid;
+  grid-template-columns: 1fr auto;
+
 
   .logo {
-    display: flex;
-    justify-content: center;
+    justify-self: center;
     
   
     a {
@@ -18,16 +20,34 @@
       font-weight: 700;
       text-decoration: none;
       letter-spacing: -0.1rem;
+
+      @include phone {
+        font-size: 6rem;
+      }
     }
   
   }
-  .signOutButton {
-    margin-left: .8rem;
-    font-size: 1.6rem;
-    text-decoration: none;
-    color: $color-bright-pink;
-    align-self: flex-end;
-   }
+
+  .buttonContainer {
+    justify-self: start;
+    align-self: start;
+    margin-right: 2.4rem;
+    margin-left: 2.4rem;
+    margin-bottom: 1.4rem;
+
+    .signOutButton {
+      // border: solid 1px $color-black;
+      // border-radius: 25px;
+      border: none;
+      padding: 1rem 1.6rem;
+      background-color: transparent;
+      font-size: 1.6rem;
+      text-decoration: none;
+      color: $color-orange;
+      font-weight: 600;
+     
+     }
+  }
 
 
 }

@@ -7,14 +7,15 @@
   margin-left: 2rem;
   margin-right: 2rem;
   padding: 1rem 1rem 2rem 1rem;
-  border-bottom: $color-border-gray-400 1px solid;
-  &:last-child {
-    border-bottom: none;
-  }
+  // border: $color-border-gray-400 1px solid;
+  border-radius: 10px;
+  // background-color: $color-white;
+  
+ 
 
   @include phone {
-    margin: 1rem;
-    padding: 1rem 0.5rem 1rem 0.5rem;
+    // margin: 1rem;
+    // padding: 1rem 0.5rem 1rem 0.5rem;
   }
 }
 
@@ -42,14 +43,17 @@
 
 .textContainer {
   margin-left: 3rem;
+  align-self: center;
+  
 
   @include phone {
     margin-left: 1.6rem;
   }
 
   p {
-    margin-bottom: 0.8rem;
-    color: $color-dark-navyBlue;
+    font-size: 2rem;
+    margin-bottom: 0.4rem;
+    color: $color-black;
     font-weight: 500;
     line-height: normal;
 
@@ -65,9 +69,13 @@
   align-items: center;
   padding: 0;
 
+
+  
   li {
     padding: 0;
     margin-left: 1rem;
+    font-size: 1.6rem;
+    
 
     &:first-child {
       margin-left: 0;
@@ -75,11 +83,11 @@
       font-weight: 500;
     }
     &:nth-child(2) {
-      color: #00CDA8;
+      color: $color-orange;
       font-weight: 500;
     }
     &:nth-child(3) {
-      color: #00CDA8;
+      color: $color-orange;
       font-weight: 500;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -97,6 +105,6 @@
     cursor: pointer;
     font-weight: 600;
     letter-spacing: -0.1rem;
-    margin-right: 2.4rem;
+    // margin-right: 2.4rem;
   }
 }

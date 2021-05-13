@@ -4,7 +4,7 @@
   margin-top: 4rem;
 
   @include phone {
-    margin-top: 4rem;
+    margin-top: 2rem;
   }
 }
 
@@ -13,7 +13,7 @@
   display: flex;
   justify-content: space-between;
 
-  @include tab-port {
+  @include tab-land {
     flex-direction: column;
   }
 }
@@ -21,17 +21,17 @@
 .left {
   width: 50%;
   margin-top: 5rem;
-  margin-right: 4rem;
-  position: sticky;
-  top: 20px;
+  margin-right: 8rem;
+
 
   @include tab-land {
-    width: 35%;
-    margin-right: 30px;
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 30px;
   }
 
   @include tab-port {
-    width: 100%;
+    width: 80%;
     margin: 0 auto;
     margin-bottom: 30px;
   }
@@ -65,13 +65,17 @@
   position: relative;
   padding: 1.25rem 1.25rem;
   margin-right: .5rem;
-  background-color: #000;
-  color: #000;
-  font-size: 1.6rem;
-  font-weight: 600;
+  background-color: $color-black;
+  color: $color-black;
+  font-size: 1.4rem;
+  font-weight: 500;
   letter-spacing: 0.05em;
   text-decoration: none;
   text-transform: uppercase;
+
+  @include phone {
+    font-size: 1.2rem;
+  }
 
   &:after {
     position: absolute;
@@ -108,6 +112,10 @@
   position: sticky;
   top: 20px;
 
+  @include tab-land {
+    background: none;
+  }
+
 
 
   span a {
@@ -120,11 +128,13 @@
   width: 50%;
 
   @include tab-land {
-    width: 65%;
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 30px;
   }
 
   @include tab-port {
-    width: 100%;
+    width: 80%;
     margin: 0 auto;
     margin-bottom: 30px;
   }

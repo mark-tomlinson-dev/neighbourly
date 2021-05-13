@@ -76,7 +76,9 @@ const Header = (props) => {
           <div className={styles.logo}>
             <Link to="/">Neighbourly.</Link>
           </div>
-          <a className={styles.signOutButton} onClick={handleSignOut}>Log out</a>
+          <div className={styles.buttonContainer}>
+            <p>Done your part?</p><button className={styles.signOutButton} onClick={handleSignOut}>Log out</button>
+          </div>
         </header>
       )
     }
