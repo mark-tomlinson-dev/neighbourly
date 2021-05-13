@@ -33,8 +33,8 @@ $color-text-gray-800: #2d3748;
 $color-border-gray-400: #cbd5e0;
 $color-border-gray-500: #c4c4c4;
 $gradient-purple-opaque: linear-gradient(
-  123.83deg,
-  rgba(219, 160, 221, 0.64) 8.94%,
+  0deg,
+  rgba(219, 160, 221, 0.1) 8.94%,
   rgba(221, 160, 221, 0) 101.38%
 );
 
@@ -122,11 +122,20 @@ li {
 
 button {
   cursor: pointer;
+  appearance: none;
+
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
 }
 
 // Basic site-wide responsive container
