@@ -13,7 +13,7 @@ router.post('/upload', imgUpload.single('file'), async (req,res) => {
   if (req.file) {
     await res.send(req.file.location)
   } else {
-    res.send("https://neighbours-book.s3-ap-southeast-2.amazonaws.com/userDefaultImage.png")
+    res.send("https://neighbourly-user-images.s3-ap-southeast-2.amazonaws.com/splatter.jpg")
   }
 });
 
