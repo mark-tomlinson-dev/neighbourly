@@ -10,24 +10,33 @@
 
   position: relative;
 
+  @include tab-land {
+    width: 100%;
+    padding: 3rem;
+    background-color: $color-white;
+    box-shadow: none;
+  }
+
+  @include tab-port {
+    width: 100%;
+  }
+
+  @include phone {
+    width: 100%;
+  }
+
   .logFeedButton {
-    // z-index: -1;
-    position: absolute;
-    top: -70px;
-    right: 10%;
-    background-color: $color-orange;
+
+    background-color: $color-dark-navyBlue;
     border: none !important;
     color: $color-white;
     text-transform: uppercase;
-    opacity: .9;
     font-weight: 400;
-    padding: .5em 1em;
-    font-size: 1.6em;
+    padding: 1rem 1.4rem;
+    font-size: 1.6rem;
     text-align: center;
-    border-radius: 50%;
+    border-radius: 2px;
     outline: none;
-    width: 6em;
-    height: 6em;
     cursor: pointer;
   }
 }

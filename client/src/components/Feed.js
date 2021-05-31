@@ -14,6 +14,7 @@ import LogStatusButton from './LogStatusButton';
 // Styles
 import styles from './../sass/components/Feed.module.scss';
 
+
 const Feed = (props) => {
   
   const handleAllPosts = () => {
@@ -42,12 +43,8 @@ const Feed = (props) => {
           </div>
         )
       });
-
       return posts
-
     } 
-    
-    
     
     else {
       return (
@@ -61,8 +58,6 @@ const Feed = (props) => {
   return (
     <div className={styles.feed} >
       <div className={styles.logFeedContainer}>
-        {/* <LogStatusButton /> */}
-        <button className={styles.logFeedButton}>Click to self-isolate</button>
         {handleAllPosts()}
       </div>
     </div>

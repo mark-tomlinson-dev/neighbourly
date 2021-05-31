@@ -7,14 +7,15 @@
   flex-direction: column;
   margin-top: 7.5rem;
   .logInFormContainer {
+    background-color: rgba(255, 255, 255, 0.43);
     display: flex;
     align-content: center;
     align-items: center;
     flex-direction: column;
-    border-radius: 25px;
+    border-radius: 4px;
     padding: 4.8rem 4.2rem 4.8rem 4.2rem;
-    background: $gradient-purple-opaque;
     box-shadow: $shadow-lg;
+    // border: solid 1px $color-black;
       @include phone {
         background: none;
         box-shadow: none;
@@ -25,7 +26,6 @@
         text-align: center;
         color: $color-text-gray-800;
         font-size: 2.4rem;
-        opacity: .9;
       }
       h2 {
         text-align: right;
@@ -34,11 +34,12 @@
         opacity: .8;
       }
     }
-  .inputContainer { 
-    margin: 1rem; 
+  .inputContainer {
+    margin-top: 1rem;
     input {
+      // border: solid 1px $color-black;
       border: none;
-      border-radius: 5px;
+      border-radius: 4px;
       height: 3.4rem;
       width: 32rem;
       padding-left: 1rem;
@@ -60,20 +61,24 @@
     }
   }
     .buttons {
+      align-self: start;
       margin-top: 3rem;
+      margin-bottom: 1.6rem;
       button[type=submit] {
         max-width: 100%;
-        font-size: 1.6rem;
         text-decoration: none;
         font-weight: 500;
-        margin: 0 .8rem;
+        font-size: 1.2rem;
         border: none;
-        background: $color-dark-navyBlue;
-        color: $color-dark-yellow;
-        border-radius: 5px;
+        background: none;
+        
+        background-color: $color-black;
+        color: $color-white;
+        border-radius: 4px;
         padding: .8rem 3rem;
         cursor: pointer;
-        box-shadow: $shadow;
+        text-transform: uppercase;
+       
         &:focus {
           outline: none;
         }
@@ -83,13 +88,13 @@
           transition: .1s ease-in-out;
         }
         &:active {
-          background-color: $color-dark-yellow-100;
-          color: $color-dark-navyBlue;
+          background-color: $color-white;
+          color: $color-black;
           box-shadow: none;
           &:focus {
             outline: none;
           }
-        }
+        } 
         @include phone {
           padding: 1rem 6rem;
         }

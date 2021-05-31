@@ -11,7 +11,7 @@ import { savePostDataToStore, addNewPostToAllPostStore } from './../redux/action
 import { handlePost } from './../api/handlePost';
 
 // Styles
-import styles from './../sass/components/LogStatusButton.module.scss';
+import styles from './../sass/components/About.module.scss';
 
 const LogStatusButton = (props) => {
 
@@ -47,23 +47,21 @@ const LogStatusButton = (props) => {
     
     if (props.currentUser === null) {
       return (
-        <Link to={"/signup"}><button className={styles.button}> Click me to signup/login </button></Link>
+        <Link to={"/signup"}><button className={styles.button} data-content="Please click to sign up"></button></Link>
       )
     } else {
 
-      return (
-        <div>
-          <button className={styles.button} disabled={handleDisableOnStatusButton()} onClick={handleStatusButtonOnClick}> Click me to log your fight against COVID-19! </button>
-        </div>
+      return (  
+        <button className={styles.btn} disabled={handleDisableOnStatusButton()} onClick={handleStatusButtonOnClick} data-content="Yep, I sure did!">Yep, I sure did!</button>
       )
     }
   };
 
   return (
-    <div className={styles.buttonContainer}>
+    <div className={styles.buttons}>
       {handleStatusButtonWhenUserHasLoggedIn()}
     </div>
-  );
+    );
 };
 
 // Below calls dispatch with redux store. 
