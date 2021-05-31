@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/UnicusDevs/COVID19NeighbourhoodAwareness.git"
+    "url": "git+https://github.com/mark-tomlinson-dev/neighbourly2"
   },
   "author": "",
   "license": "ISC",
@@ -29,7 +29,7 @@
   "dependencies": {
     "@hapi/joi": "^17.1.1",
     "aws-sdk": "^2.662.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "concurrently": "^5.1.0",
@@ -41,7 +41,7 @@
     "express": "^4.17.1",
     "heroku": "^7.39.2",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.9.6",
+    "mongoose": "^5.12.12",
     "mongoose-paginate-v2": "^1.3.9",
     "morgan": "^1.10.0",
     "multer": "^1.4.2",
