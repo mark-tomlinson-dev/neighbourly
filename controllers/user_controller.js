@@ -55,7 +55,6 @@ async function signUp(req, res) {
       Suburb: req.body.Suburb,
       Password: hashPassword,
       EmailAddress: req.body.EmailAddress,
-      Age: req.body.Age,
       ImageURL: req.body.ImageURL,
     });
 
@@ -71,7 +70,7 @@ async function signUp(req, res) {
 
 // Get profile Data
 async function getUserProfileStuff(user, currentUser = false) {
-  const { EmailAddress, FirstName, LastName, Suburb, Age } = user;
+  const { EmailAddress, FirstName, LastName, Suburb } = user;
 
   return {
     _id: User._id,
@@ -79,7 +78,6 @@ async function getUserProfileStuff(user, currentUser = false) {
     FirstName,
     LastName,
     Suburb,
-    Age,
   };
 }
 
@@ -97,7 +95,6 @@ async function getCurrentUser(req, res) {
         LastName,
         Suburb,
         EmailAddress,
-        Age,
         ImageURL,
       } = req.user;
 
@@ -107,7 +104,6 @@ async function getCurrentUser(req, res) {
         LastName: LastName,
         Suburb: Suburb,
         EmailAddress: EmailAddress,
-        Age: Age,
         ImageURL: ImageURL,
       };
       res.json({ ...userData, success: req.success });
@@ -119,13 +115,12 @@ async function getCurrentUser(req, res) {
 
 async function getUser(req, res) {
   const user = await User.findOne({ _id: req.params.user_id });
-  const { FirstName, LastName, Age, ImageURL } = user;
+  const { FirstName, LastName, ImageURL } = user;
 
   try {
     res.json({
       FirstName: FirstName,
       LastName: LastName,
-      Age: Age,
       ImageURL: ImageURL,
     });
   } catch (err) {
@@ -162,7 +157,6 @@ async function editCurrentUser(req, res) {
         LastName,
         Suburb,
         EmailAddress,
-        Age,
         ImageURL,
       } = req.body;
 
@@ -173,7 +167,6 @@ async function editCurrentUser(req, res) {
           FirstName: FirstName,
           LastName: LastName,
           Suburb: Suburb,
-          Age: Age,
           ImageURL: ImageURL,
         },
         {

@@ -10,7 +10,6 @@ export const signup = async (values, fileUrl) => {
       FirstName: values.firstName,
       LastName: values.lastName,
       Suburb: values.suburb,
-      Age: values.age,
       EmailAddress: values.emailAddress,
       Password: values.password,
       ImageURL: fileUrl

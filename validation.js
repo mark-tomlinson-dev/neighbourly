@@ -15,7 +15,6 @@ const signUpValidation = data => {
         EmailAddress: Joi.string().min(3)
                          .required()
                          .email(),
-        Age: Joi.number().min(1).required(),
         Password: Joi.string()
                      .min(6)
                      .required()

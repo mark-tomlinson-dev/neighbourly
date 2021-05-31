@@ -18,7 +18,6 @@ const LogStatus = (props) => {
 
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
-  const [age, setAge] = useState(0);
   const [createdAt, setCreatedAt] = useState("");
   const [count, setCount] = useState(0);
   const [image, setImage] = useState(null);
@@ -27,10 +26,9 @@ const LogStatus = (props) => {
     async function fetchAPI() {
       const id = props.user;
       await getUserData(id).then((response) => {
-        const {FirstName, LastName, Age, ImageURL } = response.data;
+        const {FirstName, LastName, ImageURL } = response.data;
         setFirstName(FirstName);
         setLastName(LastName);
-        setAge(Age);
         setCount(props.claps);
         setImage(ImageURL);
       }).catch((err) => {

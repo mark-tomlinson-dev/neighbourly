@@ -123,21 +123,6 @@ export let SignUpForm = props => {
               {errors.lastName && errors.lastName.types.minLength && (<h5>last must be greater than two letters</h5>)}
             </div>
 
-            {/* <div className={styles.inputContainer}>
-              <div>
-                <label> Age </label>
-              </div>
-
-              <input 
-                name="age" 
-                placeholder="24" 
-                type="number" 
-                ref={register({ required: true })} 
-              />
-
-              {errors.age && errors.age.types.required && (<h5>Age required</h5>)}
-            </div>  */}
-
           <div className={styles.inputContainer}>
             <div>
               <label> Suburb </label>
