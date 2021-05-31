@@ -9,7 +9,7 @@ let config;
 
 const prod = (
   axios.create ({
-    baseURL: 'https://home2home-covid.herokuapp.com/',
+    baseURL: 'https://be-neighbourly.herokuapp.com',
     headers: { Authorization: token }
   })
 );

@@ -7,7 +7,7 @@ const cors = require("cors");
 const bodyParser = require('body-parser');
 
 const app = express();
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 5000;
 
 require('dotenv/config');
 
@@ -59,7 +59,7 @@ app.use('/', home);
 if (process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'development') {
   mongoose.connect(process.env.DB_CONNECTION_LIVE,
     { useNewUrlParser: true },
-    () => console.log("Connected to DB"))
+    () => console.log("Connected to DB 👍"))
 } else if (process.env.NODE_ENV === 'local') {
   mongoose.connect(process.env.DB_CONNECTION_TEST,
     { useNewUrlParser: true },
