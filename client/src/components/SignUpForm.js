@@ -78,12 +78,14 @@ export let SignUpForm = props => {
           <img src={profileImage} alt="profile" className={styles.profileImage}/>
 
           <input
+            className={styles.chooseImageButton}
             name="profileImage"
             label="Profile Image"
             type="file"
             onChange={handleFileChosen}
             ref={register}
           />
+          {/* <label htmlFor="upload">Choose file</label> */}
 
         </div>
         <div className={styles.row}>
@@ -121,7 +123,7 @@ export let SignUpForm = props => {
               {errors.lastName && errors.lastName.types.minLength && (<h5>last must be greater than two letters</h5>)}
             </div>
 
-            <div className={styles.inputContainer}>
+            {/* <div className={styles.inputContainer}>
               <div>
                 <label> Age </label>
               </div>
@@ -134,7 +136,7 @@ export let SignUpForm = props => {
               />
 
               {errors.age && errors.age.types.required && (<h5>Age required</h5>)}
-            </div> 
+            </div>  */}
 
           <div className={styles.inputContainer}>
             <div>
@@ -179,6 +181,9 @@ export let SignUpForm = props => {
                 )}
                 />
               {errors.suburb && errors.suburb.types.required && (<h5>Suburb required</h5>)}
+            </div>
+            <div className={styles.buttons}>
+              <button type="submit"> Submit </button>
             </div>
           </div> 
           <div className={styles.right}>
@@ -226,9 +231,6 @@ export let SignUpForm = props => {
               /> 
 
               {errors.confirmPassword && errors.confirmPassword.types.required && (<h5>Please confirm your password</h5>)}
-            </div>
-            <div className={styles.buttons}>
-              <button type="submit"> Submit </button>
             </div>
           </div>
         </div>

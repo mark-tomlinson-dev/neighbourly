@@ -11,14 +11,14 @@ const SecondaryHeader = (props) => {
 			return (
 				<nav>
 					<p>Already have an account?</p>
-					<Link to={"/login"}>Log in now</Link>
+					<Link to={"/login"}><span>Log in now</span></Link>
 				</nav>
 			)
 		else if (window.location.pathname === "/login") {
 			return (
 				<nav>
 					<p>Not a member?</p>
-					<Link to={"/signup"}>Sign up now</Link>
+					<Link to={"/signup"}><span>Sign up now</span></Link>
 				</nav>
 			);
 		}

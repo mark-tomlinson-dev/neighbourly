@@ -7,8 +7,42 @@
   margin-bottom: 5rem;
   margin-top: 5rem;
   padding-top: 3rem;
+
+  position: relative;
+
+  @include tab-land {
+    width: 100%;
+    padding: 3rem;
+    background-color: $color-white;
+    box-shadow: none;
+  }
+
+  @include tab-port {
+    width: 100%;
+  }
+
+  @include phone {
+    width: 100%;
+  }
+
+  .logFeedButton {
+
+    background-color: $color-dark-navyBlue;
+    border: none !important;
+    color: $color-white;
+    text-transform: uppercase;
+    font-weight: 400;
+    padding: 1rem 1.4rem;
+    font-size: 1.6rem;
+    text-align: center;
+    border-radius: 2px;
+    outline: none;
+    cursor: pointer;
+  }
 }
 
 .noPostsContainer {
+  height: 60vh;
   text-align: center;
 }
+

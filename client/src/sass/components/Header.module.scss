@@ -1,17 +1,63 @@
 @import "./../main.scss";
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,500&display=swap");
 
-.logo {
-  display: flex;
-  justify-content: center;
-  
 
-  a {
-    font-family: "Playfair Display", serif;
-    font-size: 12rem;
-    font-weight: 700;
-    text-decoration: none;
-    letter-spacing: -0.1rem;
+.container {
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  display: flex;
+  flex-direction: column;
+
+
+  .logo {
+    align-self: center;
+    
+  
+    a {
+      font-family: "Playfair Display", serif;
+      font-size: 12rem;
+      font-weight: 700;
+      text-decoration: none;
+      letter-spacing: -0.1rem;
+      @include tab-land {
+        font-size: 10rem;
+      }
+      @include tab-port {
+        font-size: 10rem;
+      }
+      @include phone {
+        font-size: 8rem;
+      }
+    }
+  
   }
 
+  .buttonContainer {
+    display: flex;
+    gap: .6rem;
+    align-self: flex-end;
+    margin-right: 2.4rem;
+    margin-left: 2.4rem;
+    margin-bottom: 1.4rem;
+    margin-top: 2.4rem;
+
+    p {
+      font-size: 1.6rem;
+    }
+
+    .signOutButton {
+      border: none;
+      background-color: transparent;
+      font-size: 1.6rem;
+      text-decoration: none;
+      color: $color-orange;
+      font-weight: 600;
+     
+     }
+  }
+
+
 }
+
+
