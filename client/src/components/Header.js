@@ -73,11 +73,12 @@ const Header = (props) => {
     } else {
       return (
         <header className={styles.container}>
+          <div className={styles.buttonContainer}>
+            <p>All done?</p>
+            <button className={styles.signOutButton} onClick={handleSignOut}>Log out</button>
+          </div>
           <div className={styles.logo}>
             <Link to="/">Neighbourly.</Link>
-          </div>
-          <div className={styles.buttonContainer}>
-            <p>Done your part?</p><button className={styles.signOutButton} onClick={handleSignOut}>Log out</button>
           </div>
         </header>
       )

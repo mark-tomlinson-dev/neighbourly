@@ -71,7 +71,7 @@
         font-size: 1.2rem;
         border: none;
         background: none;
-        // border: solid 1px $color-black;
+        
         background-color: $color-black;
         color: $color-white;
         border-radius: 4px;
@@ -83,18 +83,18 @@
           outline: none;
         }
         &:hover {
-          background: $color-black;
-          transition: .3s ease;
-          color: $color-white;
+          background: $color-dark-navyBlue-200;
+          box-shadow: $shadow-lg;
+          transition: .1s ease-in-out;
         }
         &:active {
-          // background-color: $color-dark-yellow-100;
-          // color: $color-dark-navyBlue;
-          // box-shadow: none;
+          background-color: $color-white;
+          color: $color-black;
+          box-shadow: none;
           &:focus {
             outline: none;
           }
-        }
+        } 
         @include phone {
           padding: 1rem 6rem;
         }
