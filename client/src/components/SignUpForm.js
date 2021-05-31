@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 
 // Google API
-import GooglePlacesAutocomplete from 'react-google-places-autocomplete';
+// import GooglePlacesAutocomplete from 'react-google-places-autocomplete';
 
 // React hook
 import { useForm } from 'react-hook-form';
@@ -142,44 +142,13 @@ export let SignUpForm = props => {
             <div>
               <label> Suburb </label>
             </div>
-              <GooglePlacesAutocomplete
     
-                autocompletionRequest={{
-                  componentRestrictions: {
-                    country: ['au'],
-                  },
-                }}
-
-                renderInput={(props) => (
-                  <div className={styles.googleInputContainer}>
-                    <input
-                      name="suburb"
-                      type="text"
-                      {...props}
-                      className={styles.googleInput}
-                      ref={register({ required: true, minLength: 2 })}
-                    />
-                  </div>
-                )}
-
-                renderSuggestions={(active, suggestions, onSelectSuggestion) => (
-                  <div className={styles.suggestionsContainer}>
-                    {suggestions.map((suggestion) => {
-                      return (
-                        <div
-                          key={suggestion.id}
-                          className={styles.suggestion}
-                          onClick={(event) => onSelectSuggestion(suggestion, event)}
-                        >
-                          <h4>{suggestion.description}</h4>
-                          <hr />
-                        </div>
-                      )
-                    })
-                    }
-                  </div>
-                )}
-                />
+              <input
+                name="suburb"
+                placeholder="e.g. Brunswick"
+                type="text"
+                ref={register({ required: true })}
+              />
               {errors.suburb && errors.suburb.types.required && (<h5>Suburb required</h5>)}
             </div>
             <div className={styles.buttons}>
