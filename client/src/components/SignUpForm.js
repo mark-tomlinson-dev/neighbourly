@@ -136,9 +136,6 @@ export let SignUpForm = props => {
               />
               {errors.suburb && errors.suburb.types.required && (<h5>Suburb required</h5>)}
             </div>
-            <div className={styles.buttons}>
-              <button type="submit"> Submit </button>
-            </div>
           </div> 
           <div className={styles.right}>
             <div className={styles.inputContainer}>
@@ -185,6 +182,9 @@ export let SignUpForm = props => {
               /> 
 
               {errors.confirmPassword && errors.confirmPassword.types.required && (<h5>Please confirm your password</h5>)}
+            </div>
+            <div className={styles.buttons}>
+              <button type="submit"> Submit </button>
             </div>
           </div>
         </div>
