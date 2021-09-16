@@ -11,8 +11,7 @@ header {
     height: 80px;
 
     @include phone {
-      height: 80px;
-      justify-content: center;
+      justify-content: space-evenly;
     }
     .logo {
       a {
@@ -33,11 +32,7 @@ header {
             outline: none;
           }
         } 
-
-     
       }
-
-
     }
     .navigation {
       nav {
